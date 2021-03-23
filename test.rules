@@ -1,5 +1,5 @@
 alert tcp any any -> any 3399 (msg:"bot founded";content:"login";content:"Initial";pcre:"/(login|Initial)/iU";flowbits:set,state1;flowbits:noalert;sid:1000002)
 
-alert tcp any any -> any 3399 (msg:"bot founded";content:":";pcre:"/[0-9]|[1-9][0-9]|[1-2][0-5]{2}(\.[0-9]|[1-9][0-9]|[1-2][0-5]{2}){3}:[1-9]|[1-9][0-9]|[1-9][0-9]{2}|[1-9][0-9]{3}|[1-6][0-5]{2}[0-3][0-5]/i";flowbits:isset,state1;sid:1000001)
+alert tcp any any -> any 3399 (msg:"bot founded";content:":";pcre:"/[0-9]|[1-9][0-9]|[1-2][0-5]{2}(\.[0-9]|[1-9][0-9]|[1-2][0-5]{2}){3}:[1-9]|[1-9][0-9]|[1-9][0-9]{2}|[1-9][0-9]{3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-5][0-2][0-9]|6553[0-5]/i";flowbits:isset,state1;sid:1000001)
 
 
